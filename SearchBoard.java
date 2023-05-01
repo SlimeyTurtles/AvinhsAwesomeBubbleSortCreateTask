@@ -81,7 +81,6 @@ public class SearchBoard {
 
             if (this.currentNode.hasNextValue(value)) {
                 this.charList.add(value);
-                this.currentNode = this.currentNode.searchNextNodes(value);
                 this.booleanBoard[row][col] = true;
                 SearchBoard sb = new SearchBoard(this.currentNode.searchNextNodes(value), this.booleanBoard, this.charList, this.pathList);
                 sb.searchNearbyLetters(row, col);
